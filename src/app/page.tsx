@@ -25,6 +25,8 @@ export default function HomePage() {
   const secondaryBgColor = mode === 'dark' ? 'bg-neutral-700' : 'bg-gray-100';
   const hlTextColor = mode === "dark" ? "text-primary-500" : "text-primary-600";
 
+  const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   return (
     <main>
       <Head>
@@ -83,7 +85,7 @@ export default function HomePage() {
           className="absolute w-auto min-w-full min-h-full max-w-none z-0"
         >
           <source
-            src="${BASE}/video/cover.mp4"
+            src={`${BASE}/video/cover.mp4`}
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -103,7 +105,7 @@ export default function HomePage() {
                 className="w-full z-0 rounded-lg"
               >
                 <source
-                  src="${BASE}/video/1_AirIO_introduction.mov"
+                  src={`${BASE}/video/1_AirIO_introduction.mov`}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -129,7 +131,7 @@ export default function HomePage() {
           </p>
           <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
             <source
-              src="${BASE}/video/blackbird_for_web.mov"
+              src={`${BASE}/video/blackbird_for_web.mov`}
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -146,7 +148,7 @@ export default function HomePage() {
           </p>
           <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
             <source
-              src="${BASE}/video/blackbird_for_web.mov"
+              src={`${BASE}/video/blackbird_for_web.mov`}
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -163,7 +165,7 @@ export default function HomePage() {
           </p>
           <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
             <source
-              src="${BASE}/video/blackbird_for_web.mov"
+              src={`${BASE}/video/blackbird_for_web.mov`}
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -186,7 +188,7 @@ export default function HomePage() {
             <div className='flex flex-col'>
               <video autoPlay muted controls loop className="w-full z-0 rounded-lg">
                 <source
-                  src="${BASE}/video/traj_vis/blender_tunnel_w_comment.mp4"
+                  src={`${BASE}/video/traj_vis/blender_tunnel_w_comment.mp4`}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -197,7 +199,7 @@ export default function HomePage() {
             <div className='flex flex-col'>
               <video autoPlay muted controls loop className="w-full z-0 rounded-lg">
                 <source
-                  src="${BASE}/video/traj_vis/blender_blockball_w_comment.mp4"
+                  src={`${BASE}/video/traj_vis/blender_blockball_w_comment.mp4`}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -208,7 +210,7 @@ export default function HomePage() {
             <div className='flex flex-col'>
               <video autoPlay muted controls loop className="w-full z-0 rounded-lg">
                 <source
-                  src="${BASE}/video/traj_vis/blender_wall_w_comment.mp4"
+                  src={`${BASE}/video/traj_vis/blender_wall_w_comment.mp4`}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
