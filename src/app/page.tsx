@@ -105,7 +105,7 @@ export default function HomePage() {
                 className="w-full z-0 rounded-lg"
               >
                 <source
-                  src={`${BASE}/video/1_AirIO_introduction.mov`}
+                  src={`${BASE}/video/cover.mp4`}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -131,7 +131,7 @@ export default function HomePage() {
           </p>
           <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
             <source
-              src={`${BASE}/video/blackbird_for_web.mov`}
+              src={`${BASE}/video/cover.mp4`}
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -142,34 +142,152 @@ export default function HomePage() {
 
       <section className={clsx(bgColor, textColor)}>
         <div className='layout py-12'>
-          <h2>Single-Task Highlights</h2>
+          <h2>Highlights</h2>
           <p className='py-4 text-lg'>
             Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods
           </p>
-          <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
-            <source
-              src={`${BASE}/video/blackbird_for_web.mov`}
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          
+          {/* 3x3 Video Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8'>
+            {/* Row 1 */}
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/wall-1.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Blackbird Dataset</p>
+            </div>
+            
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/wall-2.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>AirIO Introduction</p>
+            </div>
+            
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/wall-3.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Hero Video</p>
+            </div>
+            
+            {/* Row 2 */}
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/ball-1.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Tunnel Navigation</p>
+            </div>
+            
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/ball-2.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Block Ball Task</p>
+            </div>
+            
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/ball-3.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Wall Contact</p>
+            </div>
+            
+            {/* Row 3 */}
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/tunnel-1.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>System Insights</p>
+            </div>
+            
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/tunnel-2.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Performance Demo</p>
+            </div>
+            
+            <div className='flex flex-col'>
+              <video autoPlay muted controls loop className="w-full aspect-video z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/single_highlights/tunnel-3.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Method Overview</p>
+            </div>
+          </div>
 
         </div>
       </section>
 
       <section className={clsx(secondaryBgColor, textColor)}>
         <div className='layout py-12'>
-          <h2>One model for ALL</h2>
-          <p className='py-4 text-lg'>
-            Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods
+          <h2>Multi-Task</h2>
+          <p className="py-4 text-lg">
+          Multi-task performance and latent space visualization. (a) A joint model matches single-task performance. (b-c) t-SNE shows clear task separation: latent <code>h_t</code> captures evolving dynamics, while latent <code>z_t</code> encodes compact observations.
           </p>
-          <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
-            <source
-              src={`${BASE}/video/blackbird_for_web.mov`}
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
+          
+          {/* Side-by-side layout for video and figure */}
+          <div className='grid grid-cols-1 lg:grid-cols-8 gap-8 mt-8 items-center'>
+            {/* Video Section - Left */}
+            <div className='order-2 lg:order-1 lg:col-span-3'>
+              <video autoPlay muted controls loop className="w-full z-0 rounded-lg">
+                <source
+                  src={`${BASE}/video/multi-task/multi_task_compressed.mp4`}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Multi-task Performance</p> */}
+            </div>
+            
+            {/* Figure Section - Right */}
+            <div className='order-1 lg:order-2 lg:col-span-5'>
+              <div className='bg-white rounded-lg p-4'>
+                <img 
+                  src={`${BASE}/images/fig_multi.jpg`}
+                  alt="Multi-task Architecture Figure"
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Multi-task Architecture</p> */}
+            </div>
+          </div>
 
         </div>
       </section>
