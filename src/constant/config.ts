@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: 'Air-IO: Learning Inertial Odometry for Drone',
+  title: 'Ego-Vision World Model for Humanoid Contact Planning',
   description: '',
-  url: 'https://air-io.github.io',
+  url: 'https://66lau.github.io/ego-vc/',
 };
