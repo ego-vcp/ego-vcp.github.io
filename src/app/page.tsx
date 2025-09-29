@@ -301,7 +301,7 @@ export default function HomePage() {
         <div className='layout py-12'>
           <h2>Planning Visualization</h2>
           <p className='py-4 text-xl'>
-            {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
+             We take use of <a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 underline">Blender</a> to visualize the planning process.
           </p>
           
           {/* Three videos in a row */}
@@ -343,6 +343,15 @@ export default function HomePage() {
         </div>
       </section>
 
+
+      <section className={clsx(bgColor, textColor)}>
+        <div className='layout py-12'>
+          <h2>Acknowledgments</h2>
+          <p className='py-4 text-xl'>
+          We would like to thank Jiaze Cai, Yen-Jen Wang for their help in experiments. We are also grateful to Bike Zhang, Fangchen Liu, Chaoyi Pan, Junfeng Long and Yiyang Shao for their valuable discussions. 
+          </p>
+        </div>
+      </section>
 
       <section className={clsx(secondaryBgColor, textColor)}>
         <div className='layout py-12'>
