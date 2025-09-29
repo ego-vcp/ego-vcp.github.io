@@ -52,7 +52,7 @@ export default function HomePage() {
               Sangli Teng<span className="align-super text-xs leading-none">1</span>,
               Yufeng Chi<span className="align-super text-xs leading-none">1</span>, 
               Sophia Shao<span className="align-super text-xs leading-none">1</span>,
-              Zhongyu Li<span className="align-super text-xs leading-none">1</span>,
+              Zhongyu Li<span className="align-super text-xs leading-none">3</span>,
               Maani Ghaffari<span className="align-super text-xs leading-none">2</span> and 
               Koushil Sreenath<span className="align-super text-xs leading-none">1</span>
               <br />
@@ -147,7 +147,7 @@ export default function HomePage() {
         <div className='layout py-12'>
           <h2>Highlights</h2>
           <p className='py-4 text-xl'>
-            {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
+            Our world model and sampling-based MPC could achieve real-time visual contact planning with different objects interactions in real-world scenarios.
           </p>
           
           {/* 3x3 Video Grid */}
@@ -344,16 +344,21 @@ export default function HomePage() {
       </section>
 
 
-      <section className={clsx(bgColor, textColor)}>
+      <section className={clsx(secondaryBgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Acknowledgments</h2>
-          <p className='py-4 text-xl'>
-          We would like to thank Jiaze Cai, Yen-Jen Wang for their help in experiments. We are also grateful to Bike Zhang, Fangchen Liu, Chaoyi Pan, Junfeng Long and Yiyang Shao for their valuable discussions. 
-          </p>
+          <div className='py-4 text-xl space-y-4'>
+            <p>
+              We would like to thank Jiaze Cai and Yen-Jen Wang for their help in experiments. We are also grateful to Bike Zhang, Fangchen Liu, Chaoyi Pan, Junfeng Long, and Yiyang Shao for their valuable discussions.
+            </p>
+            <p>
+              This project website is built with Next.js, adapted from the <a href="https://air-io.github.io/" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 underline">AIRIO</a> website, and incorporates trajectory visualization methods inspired by <a href="https://lecar-lab.github.io/dial-mpc/" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-600 underline">DIAL-MPC</a>.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className={clsx(secondaryBgColor, textColor)}>
+      <section className={clsx(bgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Compare With Other Methods</h2>
           <p className='py-4 text-xl'>
