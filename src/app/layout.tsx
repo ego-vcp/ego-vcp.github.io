@@ -6,6 +6,9 @@ import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
+
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
 export const metadata: Metadata = {
@@ -19,11 +22,11 @@ export const metadata: Metadata = {
   // !STARTERCONF this is the default favicon, you can generate your own from https://realfavicongenerator.net/
   // ! copy to /favicon folder
   icons: {
-    icon: '/favicon/favicon.ico',
-    shortcut: '/favicon/favicon-16x16.png',
-    apple: '/favicon/apple-touch-icon.png',
+    icon: `${BASE}/favicon/berkeley-logo.png`,
+    shortcut: `${BASE}/favicon/berkeley-logo.png`,
+    apple: `${BASE}/favicon/berkeley-logo.png`,
   },
-  manifest: `/favicon/site.webmanifest`,
+  manifest: `${BASE}/favicon/site.webmanifest`,
   openGraph: {
     url: siteConfig.url,
     title: siteConfig.title,

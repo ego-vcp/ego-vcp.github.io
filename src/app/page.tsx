@@ -42,11 +42,11 @@ export default function HomePage() {
           <ExternalSwitch state={mode === "light"} switch_state={toggleMode} />
         </div>
         <div className='layout z-20 relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <h1 className='mt-4 text-5xl'>
+          <h1 className='mt-4 text-6xl'>
           Ego-Vision World Model for Humanoid Contact Planning
           </h1>
           <div className='container py-6'>
-            <span className='text-lg font-semibold'>
+            <span className='text-xl font-semibold'>
               Hang Liu<span className="align-super text-xs leading-none">2</span>, 
               Yuman Gao<span className="align-super text-xs leading-none">1</span>, 
               Sangli Teng<span className="align-super text-xs leading-none">1</span>,
@@ -57,18 +57,18 @@ export default function HomePage() {
               Koushil Sreenath<span className="align-super text-xs leading-none">1</span>
               <br />
             </span>
-            <span className='text-lg'>
-              UC Berkeley, U-M Ann Arbor
+            <span className='text-xl'>
+              UC Berkeley, UM Ann Arbor, CUHK
             </span>
           </div>
-          <div className="container flex flex-row items-center space-x-8 justify-center text-lg">
-            <ArrowLink className='mt-6' href='https://github.com/Air-IO/Air-IO' variant={mode} size='large'>
+          <div className="container flex flex-row items-center space-x-8 justify-center text-xl">
+            {/* <ArrowLink className='mt-6' href='https://github.com/Air-IO/Air-IO' variant={mode} size='large'>
               GitHub Repo
-            </ArrowLink>
-            <ArrowLink className='mt-6' href='https://arxiv.org/abs/2501.15659' variant={mode} size='large'>
+            </ArrowLink> */}
+            <ArrowLink className='mt-6' href='https://tbd' variant={mode} size='large'>
               arXiv Page
             </ArrowLink>
-            <ArrowLink className='mt-6' href='https://youtu.be/342ZfxoL7_0' variant={mode} size='large'>
+            <ArrowLink className='mt-6' href='https:/tbd' variant={mode} size='large'>
               Video Link
             </ArrowLink>
           </div>
@@ -77,6 +77,7 @@ export default function HomePage() {
         <div className="absolute bottom-4 left-4 z-20">
           <p><span className="align-super text-xs leading-none">1</span> UC Berkeley, CA, USA</p>
           <p><span className="align-super text-xs leading-none">2</span> University of Michigan, Ann Arbor, MI, USA</p>
+          <p><span className="align-super text-xs leading-none">3</span> Chinese University of Hong Kong, Hong Kong, China</p>
         </div>
         <video
           autoPlay
@@ -102,6 +103,7 @@ export default function HomePage() {
                 autoPlay
                 muted
                 controls
+                loop
                 className="w-full z-0 rounded-lg"
               >
                 <source
@@ -110,6 +112,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Wall Contact</p> */}
             </div>
             
             {/* Abstract Section - Right */}
@@ -126,8 +129,8 @@ export default function HomePage() {
       <section className={clsx(secondaryBgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Methods</h2>
-          <p className='py-4 text-lg'>
-            Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods
+          <p className='py-4 text-xl'>
+            {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
           </p>
           <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
             <source
@@ -143,8 +146,8 @@ export default function HomePage() {
       <section className={clsx(bgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Highlights</h2>
-          <p className='py-4 text-lg'>
-            Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods
+          <p className='py-4 text-xl'>
+            {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
           </p>
           
           {/* 3x3 Video Grid */}
@@ -158,7 +161,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Blackbird Dataset</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Blackbird Dataset</p> */}
             </div>
             
             <div className='flex flex-col'>
@@ -169,7 +172,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>AirIO Introduction</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>AirIO Introduction</p> */}
             </div>
             
             <div className='flex flex-col'>
@@ -180,7 +183,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Hero Video</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Hero Video</p> */}
             </div>
             
             {/* Row 2 */}
@@ -192,7 +195,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Tunnel Navigation</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Tunnel Navigation</p> */}
             </div>
             
             <div className='flex flex-col'>
@@ -203,7 +206,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Block Ball Task</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Block Ball Task</p> */}
             </div>
             
             <div className='flex flex-col'>
@@ -214,7 +217,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Wall Contact</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Wall Contact</p> */}
             </div>
             
             {/* Row 3 */}
@@ -226,7 +229,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>System Insights</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>System Insights</p> */}
             </div>
             
             <div className='flex flex-col'>
@@ -237,7 +240,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Performance Demo</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Performance Demo</p> */}
             </div>
             
             <div className='flex flex-col'>
@@ -248,7 +251,7 @@ export default function HomePage() {
                 />
                 Your browser does not support the video tag.
               </video>
-              <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Method Overview</p>
+              {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Method Overview</p> */}
             </div>
           </div>
 
@@ -258,7 +261,7 @@ export default function HomePage() {
       <section className={clsx(secondaryBgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Multi-Task</h2>
-          <p className="py-4 text-lg">
+          <p className="py-4 text-xl">
           Multi-task performance and latent space visualization. (a) A joint model matches single-task performance. (b-c) t-SNE shows clear task separation: latent <code>h_t</code> captures evolving dynamics, while latent <code>z_t</code> encodes compact observations.
           </p>
           
@@ -296,9 +299,9 @@ export default function HomePage() {
 
       <section className={clsx(bgColor, textColor)}>
         <div className='layout py-12'>
-          <h2>Trajectory Visualization</h2>
-          <p className='py-4 text-lg'>
-            Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods
+          <h2>Planning Visualization</h2>
+          <p className='py-4 text-xl'>
+            {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
           </p>
           
           {/* Three videos in a row */}
@@ -344,7 +347,7 @@ export default function HomePage() {
       <section className={clsx(secondaryBgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Compare With Other Methods</h2>
-          <p className='py-4 text-lg'>
+          <p className='py-4 text-xl'>
             Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods
           </p>
 
