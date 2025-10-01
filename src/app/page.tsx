@@ -147,7 +147,7 @@ export default function HomePage() {
         <div className='layout py-12'>
           <h2>Highlights</h2>
           <p className='py-4 text-xl'>
-            Our world model and sampling-based MPC could achieve real-time visual contact planning with different objects interactions in real-world scenarios.
+            Our world model and sampling-based MPC enables real-time visual contact planning for diverse object interactions in real-world scenarios, with only <span className="text-primary-500">ego-centric depth camera</span> and proprioception.
           </p>
           
           {/* 3x3 Video Grid */}
@@ -358,16 +358,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={clsx(bgColor, textColor)}>
+      {/* <section className={clsx(bgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Compare With Other Methods</h2>
           <p className='py-4 text-xl'>
             Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods
           </p>
-
-
         </div>
-      </section>
+      </section> */}
 
 
     </main >
