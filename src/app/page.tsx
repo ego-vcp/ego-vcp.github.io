@@ -107,7 +107,7 @@ export default function HomePage() {
                 className="w-full z-0 rounded-lg"
               >
                 <source
-                  src={`${BASE}/video/cover.mp4`}
+                  src={`${BASE}/video/teaser-compressed.mp4`}
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -132,9 +132,9 @@ export default function HomePage() {
           <p className='py-4 text-xl'>
             {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
           </p>
-          <video autoPlay muted controls loop className="mx-auto z-0 rounded-lg">
+          <video  controls  className="mx-auto z-0 rounded-lg">
             <source
-              src={`${BASE}/video/cover.mp4`}
+              src={`${BASE}/video/method-compressed.mp4`}
               type="video/mp4"
             />
             Your browser does not support the video tag.
