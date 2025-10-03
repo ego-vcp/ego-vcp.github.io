@@ -2,7 +2,7 @@
 const withMDX = require('@next/mdx')({ extension: /\.mdx?$/ });
 
 const isProd = process.env.NODE_ENV === 'production';
-const repo = 'ego-vc'; // 仓库名
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const nextConfig = {
   eslint: { dirs: ['src'] },
@@ -12,13 +12,11 @@ const nextConfig = {
   swcMinify: true,
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
 
-  // 项目页路径前缀（托管在 /ego-vc 下）
-  basePath: isProd ? `/${repo}` : '',
-  assetPrefix: isProd ? `/${repo}/` : '',
+  basePath: basePath,
+  assetPrefix: basePath ? `${basePath}/` : '',
 
-  // 给原生标签使用（<video>/<audio>/<img> 等）
   env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repo}` : '',
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 
   images: {
@@ -26,7 +24,6 @@ const nextConfig = {
     domains: [],
   },
 
-  // 可选：静态导出下更稳的路由（会生成 about/index.html）
   // trailingSlash: true,
 
   webpack(config) {

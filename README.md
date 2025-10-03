@@ -61,6 +61,36 @@ public/
 - **Next.js Config**: `next.config.js` 
 - **Tailwind Config**: `tailwind.config.ts`
 
+### Environment Variables
+
+The website uses environment variables for flexible deployment configuration:
+
+```bash
+# Web dir setting
+# If deployed under the GitHub Pages，use this variable
+# eg/repo-name 或 /ego-vc
+NEXT_PUBLIC_BASE_PATH=/ego-vc
+
+# Website URL setting
+# for generating absolute link and Open Graph label
+# 例如：https://username.github.io 或 https://ego-vcp.github.io
+NEXT_PUBLIC_SITE_URL=https://ego-vcp.github.io
+```
+
+### Deployment Examples
+
+**Root domain deployment (e.g., https://ego-vcp.github.io):**
+```bash
+# no need setting NEXT_PUBLIC_BASE_PATH
+NEXT_PUBLIC_SITE_URL=https://ego-vcp.github.io
+```
+
+**Subpath deployment (e.g., https://username.github.io/ego-vc):**
+```bash
+NEXT_PUBLIC_BASE_PATH=/ego-vc
+NEXT_PUBLIC_SITE_URL=https://username.github.io
+```
+
 The website is pre-configured for GitHub Pages deployment with proper asset paths and static export settings.
 
 ---
