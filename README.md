@@ -68,12 +68,12 @@ The website uses environment variables for flexible deployment configuration:
 ```bash
 # Web dir setting
 # If deployed under the GitHub Pages，use this variable
-# eg/repo-name 或 /ego-vc
+# eg/repo-name or /ego-vc
 NEXT_PUBLIC_BASE_PATH=/ego-vc
 
 # Website URL setting
 # for generating absolute link and Open Graph label
-# 例如：https://username.github.io 或 https://ego-vcp.github.io
+# eg：https://username.github.io or https://ego-vcp.github.io
 NEXT_PUBLIC_SITE_URL=https://ego-vcp.github.io
 ```
 
