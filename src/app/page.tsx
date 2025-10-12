@@ -47,14 +47,14 @@ export default function HomePage() {
           </h1>
           <div className='container py-6'>
             <span className='text-xl font-semibold'>
-              Hang Liu<span className="align-super text-xs leading-none">2</span>, 
-              Yuman Gao<span className="align-super text-xs leading-none">1</span>, 
-              Sangli Teng<span className="align-super text-xs leading-none">1</span>,
-              Yufeng Chi<span className="align-super text-xs leading-none">1</span>, 
-              Sophia Shao<span className="align-super text-xs leading-none">1</span>,
-              Zhongyu Li<span className="align-super text-xs leading-none">3</span>,
-              Maani Ghaffari<span className="align-super text-xs leading-none">2</span> and 
-              Koushil Sreenath<span className="align-super text-xs leading-none">1</span>
+              <a href="https://66lau.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Hang Liu</a><span className="align-super text-xs leading-none">2</span>, 
+              <a href="https://www.linkedin.com/in/yuman-gao-0662482a6/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Yuman Gao</a><span className="align-super text-xs leading-none">1</span>, 
+              <a href="https://www.linkedin.com/in/sangli-teng-474121135/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Sangli Teng</a><span className="align-super text-xs leading-none">1</span>,
+              <a href="https://chiyufeng.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Yufeng Chi</a><span className="align-super text-xs leading-none">1</span>, 
+              <a href="https://people.eecs.berkeley.edu/~ysshao/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Sophia Shao</a><span className="align-super text-xs leading-none">1</span>,
+              <a href="https://zyliatzju.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Zhongyu Li</a><span className="align-super text-xs leading-none">3</span>,
+              <a href="https://robotics.umich.edu/people/faculty/maani-ghaffari/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Maani Ghaffari</a><span className="align-super text-xs leading-none">2</span> and 
+              <a href="https://hybrid-robotics.berkeley.edu/koushil/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Koushil Sreenath</a><span className="align-super text-xs leading-none">1</span>
               <br />
             </span>
             <span className='text-xl'>
@@ -75,9 +75,9 @@ export default function HomePage() {
         </div>
         <div className={clsx("absolute w-auto min-w-full min-h-full max-w-none z-10 backdrop-blur-sm", maskColor)} />
         <div className="absolute bottom-4 left-4 z-20">
-          <p><span className="align-super text-xs leading-none">1</span> UC Berkeley, CA, USA</p>
-          <p><span className="align-super text-xs leading-none">2</span> University of Michigan, Ann Arbor, MI, USA</p>
-          <p><span className="align-super text-xs leading-none">3</span> Chinese University of Hong Kong, Hong Kong, China</p>
+          <p><span className="align-super text-xs leading-none">1</span> University of California, Berkeley</p>
+          <p><span className="align-super text-xs leading-none">2</span> University of Michigan, Ann Arbor</p>
+          <p><span className="align-super text-xs leading-none">3</span> Chinese University of Hong Kong</p>
         </div>
         <video
           autoPlay
@@ -99,19 +99,18 @@ export default function HomePage() {
             {/* Video Section - Left */}
             <div className='order-2 lg:order-1'>
               <h2 className='text-center pb-4'>Video</h2>
-              <video
-                autoPlay
-                muted
-                controls
-                loop
-                className="w-full z-0 rounded-lg"
-              >
-                <source
-                  src={`${BASE}/video/teaser-compressed.mp4`}
-                  type="video/mp4"
-                />
-                Your browser does not support the video tag.
-              </video>
+              <div className="w-full aspect-video z-0 rounded-lg overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/NlTSjLGJx1U"
+                  title="Ego-Vision World Model for Humanoid Contact Planning"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="rounded-lg"
+                ></iframe>
+              </div>
               {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Wall Contact</p> */}
             </div>
             
@@ -126,22 +125,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className={clsx(secondaryBgColor, textColor)}>
-        <div className='layout py-12'>
-          <h2>Methods</h2>
-          <p className='py-4 text-xl'>
-            {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
-          </p>
-          <video  controls  className="mx-auto z-0 rounded-lg">
-            <source
-              src={`${BASE}/video/method-compressed.mp4`}
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
 
-        </div>
-      </section>
 
       <section className={clsx(bgColor, textColor)}>
         <div className='layout py-12'>
@@ -254,6 +238,23 @@ export default function HomePage() {
               {/* <p className='text-center text-sm mt-2 text-gray-600 dark:text-gray-400'>Method Overview</p> */}
             </div>
           </div>
+
+        </div>
+      </section>
+
+      <section className={clsx(secondaryBgColor, textColor)}>
+        <div className='layout py-12'>
+          <h2>Methods</h2>
+          <p className='py-4 text-xl'>
+            {/* Without external sensors or control information, AirIO achieves <span className='text-primary-500'>up to a 86.6% performance boost</span> over SOTA methods */}
+          </p>
+          <video  controls  className="mx-auto z-0 rounded-lg">
+            <source
+              src={`${BASE}/video/method-compressed.mp4`}
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
 
         </div>
       </section>
