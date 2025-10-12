@@ -68,7 +68,7 @@ export default function HomePage() {
             <ArrowLink className='mt-6' href='https://tbd' variant={mode} size='large'>
               arXiv Page
             </ArrowLink>
-            <ArrowLink className='mt-6' href='https:/tbd' variant={mode} size='large'>
+            <ArrowLink className='mt-6' href='https://www.youtube.com/embed/NlTSjLGJx1U' variant={mode} size='large'>
               Video Link
             </ArrowLink>
           </div>
