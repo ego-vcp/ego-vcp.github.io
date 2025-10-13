@@ -48,12 +48,12 @@ export default function HomePage() {
           <div className='container py-6'>
             <span className='text-xl font-semibold'>
               <a href="https://66lau.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Hang Liu</a><span className="align-super text-xs leading-none">2</span>, 
-              <a href="https://www.linkedin.com/in/yuman-gao-0662482a6/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Yuman Gao</a><span className="align-super text-xs leading-none">1</span>, 
-              <a href="https://www.linkedin.com/in/sangli-teng-474121135/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Sangli Teng</a><span className="align-super text-xs leading-none">1</span>,
-              <a href="https://chiyufeng.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Yufeng Chi</a><span className="align-super text-xs leading-none">1</span>, 
-              <a href="https://people.eecs.berkeley.edu/~ysshao/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Yakun Sophia Shao</a><span className="align-super text-xs leading-none">1</span>,
-              <a href="https://zyliatzju.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Zhongyu Li</a><span className="align-super text-xs leading-none">3</span>,
-              <a href="https://robotics.umich.edu/people/faculty/maani-ghaffari/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Maani Ghaffari</a><span className="align-super text-xs leading-none">2</span> and 
+              <a href="https://www.linkedin.com/in/yuman-gao-0662482a6/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Yuman Gao</a><span className="align-super text-xs leading-none">1</span>, 
+              <a href="https://www.linkedin.com/in/sangli-teng-474121135/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Sangli Teng</a><span className="align-super text-xs leading-none">1</span>,
+              <a href="https://chiyufeng.me/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Yufeng Chi</a><span className="align-super text-xs leading-none">1</span>, 
+              <a href="https://people.eecs.berkeley.edu/~ysshao/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Yakun Sophia Shao</a><span className="align-super text-xs leading-none">1</span>,
+              <a href="https://zyliatzju.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Zhongyu Li</a><span className="align-super text-xs leading-none">3</span>,
+              <a href="https://robotics.umich.edu/people/faculty/maani-ghaffari/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Maani Ghaffari</a><span className="align-super text-xs leading-none">2</span> and 
               <a href="https://hybrid-robotics.berkeley.edu/koushil/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Koushil Sreenath</a><span className="align-super text-xs leading-none">1</span>
               <br />
             </span>
