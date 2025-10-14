@@ -65,7 +65,7 @@ export default function HomePage() {
             {/* <ArrowLink className='mt-6' href='https://github.com/Air-IO/Air-IO' variant={mode} size='large'>
               GitHub Repo
             </ArrowLink> */}
-            <ArrowLink className='mt-6' href='https://tbd' variant={mode} size='large'>
+            <ArrowLink className='mt-6' href='http://arxiv.org/abs/2510.11682' variant={mode} size='large'>
               arXiv Page
             </ArrowLink>
             <ArrowLink className='mt-6' href='https://www.youtube.com/embed/NlTSjLGJx1U' variant={mode} size='large'>
@@ -99,6 +99,7 @@ export default function HomePage() {
             {/* Video Section - Left */}
             <div className='order-2 lg:order-1'>
               <h2 className='text-center pb-4'>Video</h2>
+              <p className='text-center text-base mb-4 text-gray-600 dark:text-gray-400'>🔊 Sound on (recommended)</p>
               <div className="w-full aspect-video z-0 rounded-lg overflow-hidden">
                 <iframe
                   width="100%"
