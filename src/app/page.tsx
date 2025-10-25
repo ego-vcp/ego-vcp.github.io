@@ -24,6 +24,7 @@ export default function HomePage() {
   const maskColor = mode === 'dark' ? 'bg-dark/70' : 'bg-white/70';
   const secondaryBgColor = mode === 'dark' ? 'bg-neutral-700' : 'bg-gray-100';
   const hlTextColor = mode === "dark" ? "text-primary-500" : "text-primary-600";
+  const linkIconClass = 'h-6 w-6 shrink-0';
 
   const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -65,12 +66,55 @@ export default function HomePage() {
             {/* <ArrowLink className='mt-6' href='https://github.com/Air-IO/Air-IO' variant={mode} size='large'>
               GitHub Repo
             </ArrowLink> */}
-            <ArrowLink className='mt-6' href='http://arxiv.org/abs/2510.11682' variant={mode} size='large'>
+            <ArrowLink
+              className='mt-6'
+              href='http://arxiv.org/abs/2510.11682'
+              variant={mode}
+              size='large'
+              icon={
+                <img
+                  src='/logos/arxiv.svg'
+                  alt='arXiv logo'
+                  className={linkIconClass}
+                  loading='lazy'
+                />
+              }
+            >
               arXiv Page
             </ArrowLink>
-            <ArrowLink className='mt-6' href='https://www.youtube.com/embed/NlTSjLGJx1U' variant={mode} size='large'>
+            <ArrowLink
+              className='mt-6'
+              href='https://www.youtube.com/embed/NlTSjLGJx1U'
+              variant={mode}
+              size='large'
+              icon={
+                <img
+                  src='/logos/youtube.svg'
+                  alt='YouTube logo'
+                  className={linkIconClass}
+                  loading='lazy'
+                />
+              }
+            >
               Video Link
             </ArrowLink>
+            <ArrowLink
+              className='mt-6'
+              href='https://github.com/HybridRobotics/Ego-VCP'
+              variant={mode}
+              size='large'
+              icon={
+                <img
+                  src='/logos/github_l.svg'
+                  alt='GitHub logo'
+                  className={linkIconClass}
+                  loading='lazy'
+                />
+              }
+            >
+              Code Repo
+            </ArrowLink>
+
           </div>
         </div>
         <div className={clsx("absolute w-auto min-w-full min-h-full max-w-none z-10 backdrop-blur-sm", maskColor)} />
