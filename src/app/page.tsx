@@ -105,7 +105,7 @@ export default function HomePage() {
               size='large'
               icon={
                 <img
-                  src='/logos/github_l.svg'
+                  src='/logos/github.svg'
                   alt='GitHub logo'
                   className={linkIconClass}
                   loading='lazy'
