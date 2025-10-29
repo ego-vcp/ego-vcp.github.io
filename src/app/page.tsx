@@ -84,7 +84,7 @@ export default function HomePage() {
             </ArrowLink>
             <ArrowLink
               className='mt-6'
-              href='https://www.youtube.com/embed/NlTSjLGJx1U'
+              href='https://www.youtube.com/watch?v=NlTSjLGJx1U&t=1s'
               variant={mode}
               size='large'
               icon={
