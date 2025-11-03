@@ -44,7 +44,11 @@ export default function HomePage() {
         </div>
         <div className='layout z-20 relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
           <h1 className='mt-4 text-6xl'>
-          Ego-Vision World Model for Humanoid Contact Planning
+            <span className='text-sky-300'>Ego-VCP:</span>
+          </h1>
+          <h1 className='mt-4 text-5xl'>
+            <span className='text-sky-300'>Ego</span>-
+            <span className='text-sky-300'>V</span>ision World Model for Humanoid <span className='text-sky-300'>C</span>ontact <span className='text-sky-300'>P</span>lanning
           </h1>
           <div className='container py-6'>
             <span className='text-xl font-semibold'>
