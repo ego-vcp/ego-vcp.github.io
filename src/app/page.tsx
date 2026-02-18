@@ -454,7 +454,7 @@ export default function HomePage() {
               <div className='space-y-2'>
                 <h3 className={clsx('text-lg font-semibold', questionTextColor)}>Question</h3>
                 <p className={clsx(qaTextSize, questionTextColor)}>
-                  Additional explanation of how the world model and MPC collaborate would be helpful
+                  Additional explanation of how the world model and MPC collaborate would be helpful.
                 </p>
                 <h3 className={clsx('pt-1 text-lg font-semibold', answerTextColor)}>Answer</h3>
                 <p className={clsx(qaTextSize, answerTextColor)}>
