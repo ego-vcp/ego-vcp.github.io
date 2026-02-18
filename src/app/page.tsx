@@ -23,6 +23,12 @@ export default function HomePage() {
   const bgColor = mode === 'dark' ? 'bg-dark' : 'bg-white';
   const maskColor = mode === 'dark' ? 'bg-dark/70' : 'bg-white/70';
   const secondaryBgColor = mode === 'dark' ? 'bg-neutral-700' : 'bg-gray-100';
+  const cardBgColor = 'bg-neutral-900';
+  const cardBorderColor = 'border-sky-500/40';
+  const questionTextColor = 'text-sky-300';
+  const answerTextColor = 'text-white';
+  const qaTextSize = 'text-sm leading-relaxed';
+  const qaHintColor = mode === 'dark' ? 'text-gray-400' : 'text-gray-600';
   const hlTextColor = mode === "dark" ? "text-primary-500" : "text-primary-600";
   const linkIconClass = 'h-6 w-6 shrink-0';
 
@@ -393,8 +399,99 @@ export default function HomePage() {
         </div>
       </section>
 
-
       <section className={clsx(secondaryBgColor, textColor)}>
+        <div className='layout py-12'>
+          <h2>Reviewer Q&A</h2>
+          <p className={clsx('mt-2 text-sm italic', qaHintColor)}>
+            You might also ask questions like these:
+          </p>
+          <div className={clsx('mt-6 rounded-lg border p-6', cardBgColor, cardBorderColor)}>
+            <div className='space-y-8'>
+              <div className='space-y-2'>
+                <h3 className={clsx('text-lg font-semibold', questionTextColor)}>Question</h3>
+                <p className={clsx(qaTextSize, questionTextColor)}>
+                  Discussion on computational cost and inference latency for onboard versus offboard deployment would help.
+                </p>
+                <h3 className={clsx('pt-1 text-lg font-semibold', answerTextColor)}>Answer</h3>
+                <p className={clsx(qaTextSize, answerTextColor)}>
+                  Our inference deployment runs on a laptop equipped with an NVIDIA RTX 2060. The high-level vision-based MPC plans
+                  at 25 Hz, and most of the runtime is spent on world-model inference. We have optimized the inference speed in our
+                  code; see the implementation details at{' '}
+                  <a
+                    href="https://github.com/HybridRobotics/Ego-VCP/blob/main/ego_vcp/scripts/play_wm.py"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline"
+                  >
+                    GitHub: play_wm.py
+                  </a>
+                  .
+                </p>
+              </div>
+
+              <div className='space-y-2'>
+                <h3 className={clsx('text-lg font-semibold', questionTextColor)}>Question</h3>
+                <p className={clsx(qaTextSize, questionTextColor)}>
+                  Possibly restricted generalization due to offline dataset from random actions; additional discussion or validation under sensory noise or unseen dynamics would help.
+                </p>
+                <h3 className={clsx('pt-1 text-lg font-semibold', answerTextColor)}>Answer</h3>
+                <p className={clsx(qaTextSize, answerTextColor)}>
+                  We demonstrate that our method achieves stable contact planning using only noisy onboard camera observations, enabled
+                  by carefully designed domain randomization in simulation (see{' '}
+                  <a
+                    href="https://github.com/HybridRobotics/Ego-VCP/blob/5f2f2a639793d00310b073906a91bfed5d9fe557/ego_vcp/envs/g1/g1_wall_env.py#L690"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline"
+                  >
+                    g1_wall_env.py#L690
+                  </a>
+                  ). Our experiments also show nontrivial generalization to out-of-distribution scenarios for example, the robot can
+                  block an unseen flying object (e.g., a box) and remain stable while a human passes through the scene.
+                </p>
+              </div>
+
+              <div className='space-y-2'>
+                <h3 className={clsx('text-lg font-semibold', questionTextColor)}>Question</h3>
+                <p className={clsx(qaTextSize, questionTextColor)}>
+                  Additional explanation of how the world model and MPC collaborate would be helpful
+                </p>
+                <h3 className={clsx('pt-1 text-lg font-semibold', answerTextColor)}>Answer</h3>
+                <p className={clsx(qaTextSize, answerTextColor)}>
+                  Our method uses a simple division of labor between the learned world model and MPC. At each timestep, we encode the current depth image and proprioception into a compact internal state. MPC then samples many candidate high-level action sequences and “imagines” their outcomes by rolling them forward through the world model in this latent space (without predicting full images). For each candidate, the world model provides a fast estimate of how good and safe the future will be, which MPC uses to score and refine the candidates (e.g., via CEM) and select the best sequence. Finally, we execute only the first action and repeat this loop at the next timestep, enabling real-time, feedback-driven planning.
+                </p>
+              </div>
+
+              <div className='space-y-2'>
+                <h3 className={clsx('text-lg font-semibold', questionTextColor)}>Question</h3>
+                <p className={clsx(qaTextSize, questionTextColor)}>
+                  In Figure 5, comparing sample efficiency, why does PPO consistently appear below zero? Why do “Support the Wall” and “Block the Ball” suddenly rise to a “comparable level” after 1 million steps, while “Traverse the Arch” appears more stable? Additionally, the coordinate values across the three plots differ significantly in magnitude.
+                </p>
+                <h3 className={clsx('pt-1 text-lg font-semibold', answerTextColor)}>Answer</h3>
+                <p className={clsx(qaTextSize, answerTextColor)}>
+                After 1 million steps, we rescaled the x-axis to show how much data PPO actually needs to match our method. As a result, PPO appears to have an abrupt jump in the plot. In practice, our method already achieves strong performance with only 0.2 million steps of data. As discussed in Section IV, different tasks use different objective functions (reward definitions), which highlights the multi-task advantage of our method. As a result, the value scale can differ across tasks.                </p>
+              </div>
+
+              <div className='space-y-2'>
+                <h3 className={clsx('text-lg font-semibold', questionTextColor)}>Question</h3>
+                <p className={clsx(qaTextSize, questionTextColor)}>
+                  The fact that a longer planning horizon (Table I) leads to less good performance would suggest that the world model (either the dynamics or the reward model) is not predicting longer horizon well while Fig 7 claims the opposite. Do you know what is the reason for these seemingly opposing results?
+                </p>
+                <h3 className={clsx('pt-1 text-lg font-semibold', answerTextColor)}>Answer</h3>
+                <p className={clsx(qaTextSize, answerTextColor)}>
+                  In Section IV.D (Model Interpretation and Visualization on Prediction), our goal is to answer the following question: Does our model exhibit physical intuition, and does it efficiently extract a compact representation that retains only task-relevant information? The plotted trajectories show that the world model can capture the ball's parabolic motion while filtering out irrelevant noise, suggesting that the learned dynamics have not collapsed.
+                </p>
+                <p className={clsx(qaTextSize, answerTextColor)}>
+                  At the same time, no dynamics model is perfect. Moreover, in MPC it is not the case that a longer horizon is always better. Even with an analytical dynamics model, we typically do not use an excessively long horizon: increasing the horizon imposes a heavier optimization convergence burden for sampling-based MPC, and it can also amplify accumulated model errors. These two points are therefore not contradictory. The key takeaway from Table 1 is that multi-step prediction improves performance over greedy searching (horizon =1). The optimal horizon length is instead a trade-off among bias and variance, optimization landscape, and real-time constraints.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className={clsx(bgColor, textColor)}>
         <div className='layout py-12'>
           <h2>Acknowledgments</h2>
           <div className='py-4 text-xl space-y-4'>
