@@ -57,6 +57,7 @@ export default function HomePage() {
             <span className='text-sky-300'>V</span>ision World Model for Humanoid <span className='text-sky-300'>C</span>ontact <span className='text-sky-300'>P</span>lanning
           </h1>
           <div className='container py-6'>
+            
             <span className='text-xl font-semibold'>
               <a href="https://66lau.github.io/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors">Hang Liu</a><span className="align-super text-xs leading-none">2</span>, 
               <a href="https://www.linkedin.com/in/yuman-gao-0662482a6/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-500 transition-colors"> Yuman Gao</a><span className="align-super text-xs leading-none">1</span>, 
@@ -71,6 +72,7 @@ export default function HomePage() {
             <span className='text-xl'>
               UC Berkeley, UM Ann Arbor, CUHK
             </span>
+            <p className='mb-3 text-2xl font-semibold text-sky-300'>ICRA 2026</p>
           </div>
           <div className="container flex flex-row items-center space-x-8 justify-center text-xl">
             {/* <ArrowLink className='mt-6' href='https://github.com/Air-IO/Air-IO' variant={mode} size='large'>
